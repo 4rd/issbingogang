@@ -1,0 +1,49 @@
+body {
+  background-color: #000;
+
+  font-family: Arial;
+  font-weight: bold;
+}
+
+.container {
+  display: grid;
+  display: inline-block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
+  grid-template-rows: repeat(5, 100px);
+  grid-gap: 5px;
+
+  background-image: url("../img/scratcha-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.card {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  background-color: #00000055;
+  color: #FFF;
+}
+
+.card-selected {
+  background-color: #FFF9;
+  color: #000;
+}
+
+.card:hover {
+  background-color: #555555AA;
+}
+
+.marquee {
+  text-align: center;
+  background-color: black;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
