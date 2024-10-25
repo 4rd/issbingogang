@@ -1,28 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
 body {
+  margin: 0;
   background-color: #000;
 
   font-family: "Oswald", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-style: italic;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-  display: grid;
   display: inline-block;
 }
 
 .grid {
+  margin: auto;
   display: grid;
-  grid-template-columns: repeat(5, 100px);
-  grid-template-rows: repeat(5, 100px);
-  grid-gap: 5px;
 
   background-image: url("../img/scratcha-bg.jpg");
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.75rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, 19vw);
+    grid-template-rows: repeat(5, 19vw);
+    grid-gap: 1.25vw;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: repeat(5, 105px);
+    grid-template-rows: repeat(5, 105px);
+    grid-gap: 5px;
+  }
 }
 
 .card {
@@ -43,8 +67,11 @@ body {
   color: #000;
 }
 
-.card:hover {
-  background-color: #555555AA;
+
+@media (hover: hover) {
+  .card:hover {
+    background-color: #555555AA;
+  }
 }
 
 .marquee {

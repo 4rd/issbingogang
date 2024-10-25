@@ -71,9 +71,12 @@ for (const [i, cellId] of cells.entries()) {
 const audioElems = ["air-horn", "glass1", "glass2"]
 
 function onClickCard(elem) {
-  if (!elem.classList.contains('card-selected')) {
+  var wasSelected = elem.classList.contains('card-selected');
+
+  elem.classList.toggle('card-selected');
+
+  if (!wasSelected) {
     var audioId = audioElems[audioElems.length * Math.random() | 0];
     document.getElementById(audioId).play();
   }
-  elem.classList.toggle('card-selected');
 }
