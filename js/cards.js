@@ -24,7 +24,6 @@ const cards = [
   "breaking embargo",
   "partner dva in chat",
   "rinsing a listener submission",
-  "chat turn on a guest",
   "bandcamp friday"
 ];
 
@@ -69,9 +68,12 @@ for (const [i, cellId] of cells.entries()) {
   }
 }
 
+const audioElems = ["air-horn", "glass1", "glass2"]
+
 function onClickCard(elem) {
   if (!elem.classList.contains('card-selected')) {
-    document.getElementById("air-horn").play();
+    var audioId = audioElems[audioElems.length * Math.random() | 0];
+    document.getElementById(audioId).play();
   }
   elem.classList.toggle('card-selected');
 }
